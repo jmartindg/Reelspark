@@ -34,7 +34,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="bg-[#131312] text-gray-50">
+    <nav className="bg-[#131312] text-gray-50 relative z-[999]">
       <div className="container mx-auto px-4 lg:px-0 py-5 flex items-center justify-between">
         <div>
           <Link to="/">
@@ -72,7 +72,7 @@ const Navbar = () => {
             <ul className="my-12 space-y-3">
               {links.map((link) => (
                 <li key={link.id} className="font-medium rounded transition hover:bg-zinc-800">
-                  <Link to={link.path} className="block px-4 py-3">
+                  <Link to={link.path} className="block px-4 py-3" onClick={handleIsOpen}>
                     {link.name}
                   </Link>
                 </li>

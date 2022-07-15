@@ -1,6 +1,18 @@
 /* Font familty - Roboto */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
+.hero-text {
+  @apply text-gray-50 text-center font-bold mx-auto text-2xl md:w-4/6 lg:text-3xl lg:text-left lg:w-2/4 lg:mx-0;
+}
+
+.hero-cta {
+  @apply inline-block font-medium rounded bg-yellow-500 px-5 py-2 md:px-7 md:py-3 mt-3 md:mt-5 transition hover:bg-yellow-400;
+}
+
+.hero-container {
+  @apply min-h-[65vh] container rounded mx-auto my-8 flex flex-col justify-center px-7 bg-cover bg-top bg-no-repeat relative;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
