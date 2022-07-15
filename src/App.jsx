@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Browse from "./pages/Browse";
 import Movies from "./pages/Movies/Movies";
 import TvShows from "./pages/TvShows/TvShows";
+import ErrorPage from "./pages/ErrorPage";
 
 const App = () => {
   return (
@@ -19,6 +20,9 @@ const App = () => {
         <Route path="/browse" element={<Browse />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/tv-shows" element={<TvShows />} />
+
+        {/* 404 Page */}
+        <Route path="*" element={<ErrorPage />} />
       </Routes>
     </>
   );
