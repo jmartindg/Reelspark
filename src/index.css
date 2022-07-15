@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 .hero-text {
-  @apply text-gray-50 text-center font-bold mx-auto text-2xl md:w-4/6 lg:text-3xl lg:text-left lg:w-2/4 lg:mx-0;
+  @apply text-gray-50 text-center font-bold mx-auto text-xl md:w-4/6 lg:text-3xl lg:text-left lg:w-2/4 lg:mx-0;
 }
 
 .hero-cta {
@@ -10,7 +10,18 @@
 }
 
 .hero-container {
-  @apply min-h-[65vh] container rounded mx-auto my-8 flex flex-col justify-center px-7 bg-cover bg-top bg-no-repeat relative;
+  @apply min-h-[40vh] md:min-h-[50vh] lg:min-h-[65vh] container rounded mx-auto my-8 flex flex-col justify-center px-7 bg-cover bg-top bg-no-repeat relative;
+}
+
+.splide__arrow {
+  @apply opacity-100;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  @apply bg-yellow-500 !important;
 }
 
 @tailwind base;
@@ -20,5 +31,16 @@
 @layer base {
   body {
     @apply font-roboto bg-[#0a0a0a];
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span {
+    @apply text-gray-50;
   }
 }

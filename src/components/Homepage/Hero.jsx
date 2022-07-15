@@ -16,7 +16,7 @@ const Hero = () => {
 
   return (
     <section className="px-4 lg:px-0">
-      <div style={{ backgroundImage: `url(${imgUrl})` }} className="hero-container">
+      <div style={{ backgroundImage: `url(${imgUrl})` }} className="hero-container object-cover">
         <div className="absolute w-full h-full top-0 inset-x-0 bg-black opacity-60"></div>
         <h1 className="hero-text z-10">Browse and Discover collections of Movies and TV Shows for free.</h1>
         <div className="text-center lg:text-left z-10">
