@@ -51,7 +51,12 @@ const PopularTvShows = () => {
           {data
             .map((tvShow) => (
               <SplideSlide key={tvShow.id}>
-                <HomeCard title={tvShow.name} date={tvShow.first_air_date} poster={tvShow.poster_path} />
+                <HomeCard
+                  title={tvShow.name}
+                  date={tvShow.first_air_date}
+                  poster={tvShow.poster_path}
+                  rating={tvShow.vote_average}
+                />
               </SplideSlide>
             ))
             .slice(0, 10)}
