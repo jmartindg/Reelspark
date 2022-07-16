@@ -12,6 +12,8 @@ import TvShows from "./pages/TvShows/TvShows";
 import ErrorPage from "./pages/ErrorPage";
 import NowPlaying from "./pages/Movies/NowPlaying";
 import Upcoming from "./pages/Movies/Upcoming";
+import OnTheAir from "./pages/TvShows/OnTheAir";
+import TopRated from "./pages/TvShows/TopRatedTvShows";
 
 const App = () => {
   return (
@@ -28,6 +30,8 @@ const App = () => {
 
         {/* TV Shows */}
         <Route path="/tv-shows" element={<TvShows />} />
+        <Route path="/on-the-air-tv-shows" element={<OnTheAir />} />
+        <Route path="/top-rated-tv-shows" element={<TopRated />} />
 
         {/* 404 Page */}
         <Route path="*" element={<ErrorPage />} />

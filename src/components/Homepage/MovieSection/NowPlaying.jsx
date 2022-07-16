@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useQuery } from "react-query";
 import { FiChevronRight } from "react-icons/fi";
-import ColumnCard from "../Cards/ColumnCard";
+import ColumnCard from "../../Cards/ColumnCard";
 
 const getNowPlayingMovies = async () => {
   const res = await axios.get(

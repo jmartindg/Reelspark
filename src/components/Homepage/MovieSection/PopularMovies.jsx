@@ -3,7 +3,7 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import HomeCard from "../Cards/HomeCard";
+import HomeCard from "../../Cards/HomeCard";
 
 const getPopularMovies = async () => {
   const res = await axios.get(
@@ -25,7 +25,6 @@ const PopularMovies = () => {
       {status === "success" && (
         <Splide
           tag="section"
-          className=""
           aria-label="Popular Movies"
           options={{
             perPage: 5,

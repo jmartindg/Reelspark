@@ -11,7 +11,7 @@ const ColumnCard = ({ title, date, poster }) => {
 
   return (
     <article className="bg-[#1A1A1A] flex items-center rounded overflow-hidden">
-      <img src={imgUrl + poster} className="w-16" alt={title} />
+      <img src={imgUrl + poster} className="w-16 h-24 object-cover" alt={title} />
       <section className="pl-4">
         <h3 className="font-medium">{title}</h3>
         <span className="text-sm font-light">{fullFormatDate(date)}</span>
