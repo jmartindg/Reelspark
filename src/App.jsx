@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 // Components
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 // Pages
 import Home from "./pages/Home";
@@ -36,6 +37,7 @@ const App = () => {
         {/* 404 Page */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <Footer />
     </>
   );
 };
