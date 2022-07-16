@@ -6,6 +6,7 @@ import PopularTvShows from "../components/Homepage/TvShowSection/PopularTvShows"
 import UpcomingMovies from "../components/Homepage/MovieSection/UpcomingMovies";
 import OnTheAir from "../components/Homepage/TvShowSection/OnTheAir";
 import TopRatedTvShows from "../components/Homepage/TvShowSection/TopRatedTvShows";
+import PopularActors from "../components/PopularActors";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
           <TopRatedTvShows />
         </div>
       </section>
+      <PopularActors />
     </main>
   );
 };
