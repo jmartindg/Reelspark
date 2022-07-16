@@ -15,6 +15,8 @@ import NowPlaying from "./pages/Movies/NowPlaying";
 import Upcoming from "./pages/Movies/Upcoming";
 import OnTheAir from "./pages/TvShows/OnTheAir";
 import TopRated from "./pages/TvShows/TopRatedTvShows";
+import MovieDetails from "./pages/Movies/MovieDetails";
+import TvShowDetails from "./pages/TvShows/TvShowDetails";
 
 const App = () => {
   return (
@@ -33,6 +35,10 @@ const App = () => {
         <Route path="/tv-shows" element={<TvShows />} />
         <Route path="/on-the-air-tv-shows" element={<OnTheAir />} />
         <Route path="/top-rated-tv-shows" element={<TopRated />} />
+
+        {/* Details Pages */}
+        <Route path="/movie-details/:id" element={<MovieDetails />} />
+        <Route path="/tv-show-details/:id" element={<TvShowDetails />} />
 
         {/* 404 Page */}
         <Route path="*" element={<ErrorPage />} />

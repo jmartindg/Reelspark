@@ -3,7 +3,7 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import HomeCard from "../../Cards/HomeCard";
+import MovieCard from "../../Cards/MovieCard";
 
 const getPopularMovies = async () => {
   const res = await axios.get(
@@ -51,7 +51,8 @@ const PopularMovies = () => {
           {data
             .map((movie) => (
               <SplideSlide key={movie.id}>
-                <HomeCard
+                <MovieCard
+                  id={movie.id}
                   title={movie.title}
                   date={movie.release_date}
                   poster={movie.poster_path}

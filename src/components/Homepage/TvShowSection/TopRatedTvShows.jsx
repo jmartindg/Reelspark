@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useQuery } from "react-query";
 import { FiChevronRight } from "react-icons/fi";
-import ColumnCard from "../../Cards/ColumnCard";
+import TvShowColumnCard from "../../Cards/TvShowColumnCard";
 
 const getTopRatedTvShows = async () => {
   const res = await axios.get(
@@ -31,8 +31,9 @@ const TopRatedTvShows = () => {
         <div className="flex flex-col gap-3 md:gap-5">
           {data
             .map((onTheAir) => (
-              <ColumnCard
+              <TvShowColumnCard
                 key={onTheAir.id}
+                id={onTheAir.id}
                 title={onTheAir.name}
                 date={onTheAir.first_air_date}
                 poster={onTheAir.poster_path}

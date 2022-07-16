@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useQuery } from "react-query";
 import { FiChevronRight } from "react-icons/fi";
-import ColumnCard from "../../Cards/ColumnCard";
+import MovieColumnCard from "../../Cards/MovieColumnCard";
 
 const getNowPlayingMovies = async () => {
   const res = await axios.get(
@@ -33,8 +33,9 @@ const NowPlaying = () => {
         <div className="flex flex-col gap-3 md:gap-5">
           {data
             .map((nowPlaying) => (
-              <ColumnCard
+              <MovieColumnCard
                 key={nowPlaying.id}
+                id={nowPlaying.id}
                 title={nowPlaying.title}
                 date={nowPlaying.release_date}
                 poster={nowPlaying.poster_path}

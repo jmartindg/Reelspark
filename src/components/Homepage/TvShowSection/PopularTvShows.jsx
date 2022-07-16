@@ -3,7 +3,7 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import HomeCard from "../../Cards/HomeCard";
+import TvShowCard from "../../Cards/TvShowCard";
 
 const getPopularTvShows = async () => {
   const res = await axios.get(
@@ -51,7 +51,8 @@ const PopularTvShows = () => {
           {data
             .map((tvShow) => (
               <SplideSlide key={tvShow.id}>
-                <HomeCard
+                <TvShowCard
+                  id={tvShow.id}
                   title={tvShow.name}
                   date={tvShow.first_air_date}
                   poster={tvShow.poster_path}
