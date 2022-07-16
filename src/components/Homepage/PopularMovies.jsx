@@ -19,6 +19,7 @@ const PopularMovies = () => {
     <section className="container mx-auto py-4 px-4 lg:px-0">
       <header className="mb-6">
         <h2 className="font-semibold text-2xl border-l-4 border-yellow-500 pl-2">Popular Movies</h2>
+        <p className="pt-3 text-zinc-400">This week's popular movies</p>
       </header>
 
       {status === "success" && (
