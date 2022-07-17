@@ -19,7 +19,7 @@ const OnTheAir = () => {
     <>
       <header className="my-6">
         <div className="flex items-center">
-          <h2 className="font-semibold text-2xl text-yellow-500">On the Air</h2>
+          <h2 className="font-semibold text-2xl text-yellow-500">On Air</h2>
           <Link to="/on-the-air-tv-shows" title="View more playing movies now">
             <FiChevronRight size={30} className="text-yellow-500 ml-1 transition hover:text-yellow-400" />
           </Link>

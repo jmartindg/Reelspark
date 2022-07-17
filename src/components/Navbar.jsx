@@ -50,7 +50,7 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <div aria-label="Open" onClick={handleIsOpen} className="md:hidden">
+        <div aria-label="Open" onClick={handleIsOpen} className="md:hidden cursor-pointer">
           <FaBars size={20} />
         </div>
       </div>
@@ -64,7 +64,7 @@ const Navbar = () => {
         >
           <div className="flex items-center justify-between">
             <p className="uppercase tracking-wide font-black text-yellow-400">ReelSpark</p>
-            <div aria-label="Close" onClick={handleIsOpen}>
+            <div aria-label="Close" onClick={handleIsOpen} className="cursor-pointer">
               <MdClose size={25} />
             </div>
           </div>
