@@ -50,9 +50,9 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
-        <button onClick={handleIsOpen} className="md:hidden">
+        <div aria-label="Open" onClick={handleIsOpen} className="md:hidden">
           <FaBars size={20} />
-        </button>
+        </div>
       </div>
       <div className={isOpen ? "md:hidden fixed left-0 top-0 w-full h-screen bg-black bg-opacity-40" : ""}>
         <nav
@@ -64,9 +64,9 @@ const Navbar = () => {
         >
           <div className="flex items-center justify-between">
             <p className="uppercase tracking-wide font-black text-yellow-400">ReelSpark</p>
-            <button onClick={handleIsOpen}>
+            <div aria-label="Close" onClick={handleIsOpen}>
               <MdClose size={25} />
-            </button>
+            </div>
           </div>
           <div>
             <ul className="my-12 space-y-3">

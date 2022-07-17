@@ -3,7 +3,7 @@ import axios from "axios";
 import { useQuery } from "react-query";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import ActorCard from "./Cards/ActorCard";
+import ActorCard from "../Cards/ActorCard";
 
 const getPopularActors = async () => {
   const res = await axios.get(

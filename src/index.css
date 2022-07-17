@@ -17,10 +17,7 @@
   @apply opacity-100;
 }
 
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
+button {
   @apply bg-yellow-500 !important;
 }
 
