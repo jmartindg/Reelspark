@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useQuery } from "react-query";
-import { AiOutlineSearch } from "react-icons/ai";
-import MovieCard from "../components/Cards/MovieCard";
+import BrowseCard from "../components/Cards/BrowseCard";
 import ErrorMessage from "../components/ErrorMessage";
 import Loader from "../components/Loader";
 import StartSearching from "../components/StartSearching";
+import SearchBar from "../components/SearchBar";
 
 const multiSearch = async (searchValue) => {
   const res = await axios.get(
@@ -44,18 +44,7 @@ const Browse = () => {
       <header className="mb-6">
         <div className="flex flex-col justify-between md:items-center md:flex-row">
           <h2 className="font-semibold text-2xl text-yellow-500 pb-2 md:pb-0">Browse</h2>
-          <form onSubmit={submit} className="w-full md:w-1/2 lg:w-1/4 relative">
-            <input
-              type="text"
-              name="search"
-              placeholder="Search movies, tv shows, actors..."
-              value={searchValue}
-              onChange={handleChange}
-              autoComplete="off"
-              className="py-3 pr-12 focus:ring-[1px] focus:ring-yellow-500 focus:border-yellow-500 w-full rounded text-gray-50 bg-[#131312] border-gray-700 placeholder:text-sm"
-            />
-            <AiOutlineSearch size={25} className="text-gray-700 absolute top-3 right-4" />
-          </form>
+          <SearchBar submit={submit} searchValue={searchValue} handleChange={handleChange} />
         </div>
       </header>
 
@@ -68,13 +57,15 @@ const Browse = () => {
       {status === "success" && (
         <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
           {data.map((result) => (
-            <MovieCard
+            <BrowseCard
               key={result.id}
               id={result.id}
               title={result.name || result.title}
               date={result.first_air_date || result.release_date}
-              poster={result.poster_path}
+              poster={result.poster_path || result.profile_path}
               rating={result.vote_average}
+              media={result.media_type}
+              known={result.known_for_department}
             />
           ))}
         </section>
