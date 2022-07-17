@@ -50,7 +50,7 @@ const ActorsAvatar = () => {
         >
           {data.map((actor) => (
             <SplideSlide key={actor.id}>
-              <ActorCard name={actor.name} profile={actor.profile_path} />
+              <ActorCard id={actor.id} name={actor.name} profile={actor.profile_path} />
             </SplideSlide>
           ))}
         </Splide>
