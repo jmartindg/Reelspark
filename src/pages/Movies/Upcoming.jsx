@@ -19,7 +19,7 @@ const Upcoming = () => {
     };
 
     scrollToTop();
-  });
+  }, []);
 
   return (
     <section className="container mx-auto py-10 px-4 lg:px-0">
