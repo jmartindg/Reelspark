@@ -54,22 +54,25 @@ const Browse = () => {
 
       {status === "error" && <ErrorMessage error={error.message} />}
 
-      {status === "success" && (
-        <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
-          {data.map((result) => (
-            <BrowseCard
-              key={result.id}
-              id={result.id}
-              title={result.name || result.title}
-              date={result.first_air_date || result.release_date}
-              poster={result.poster_path || result.profile_path}
-              rating={result.vote_average}
-              media={result.media_type}
-              known={result.known_for_department}
-            />
-          ))}
-        </section>
-      )}
+      {status === "success" &&
+        (data.length === 0 ? (
+          <StartSearching />
+        ) : (
+          <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
+            {data.map((result) => (
+              <BrowseCard
+                key={result.id}
+                id={result.id}
+                title={result.name || result.title}
+                date={result.first_air_date || result.release_date}
+                poster={result.poster_path || result.profile_path}
+                rating={result.vote_average}
+                media={result.media_type}
+                known={result.known_for_department}
+              />
+            ))}
+          </section>
+        ))}
     </section>
   );
 };
