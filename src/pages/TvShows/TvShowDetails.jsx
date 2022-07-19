@@ -9,6 +9,7 @@ import ErrorMessage from "../../components/ErrorMessage";
 import TvShowCast from "../../components/Details/TV/TvShowCast";
 import TvShowMoreInfo from "../../components/Details/TV/TvShowMoreInfo";
 import TvShowReview from "../../components/Details/TV/TvShowReview";
+import SimilarTvShow from "../../components/Details/TV/SimilarTvShow";
 
 const getTvShowDetails = async (id) => {
   const res = await axios.get(
@@ -128,7 +129,7 @@ const TvShowDetails = () => {
       {/* TV Show cast */}
       <TvShowCast />
 
-      <section className="container mx-auto px-4 lg:px-0 grid md:grid-cols-12 gap-6">
+      <section className="container mx-auto px-4 lg:px-0 md:grid md:grid-cols-12 gap-6">
         <div className="md:col-span-8">
           {/* TV Show reviews */}
           <TvShowReview />
@@ -140,6 +141,8 @@ const TvShowDetails = () => {
               website={data.homepage}
               first_air={data.first_air_date}
               last_air={data.last_air_date}
+              seasons={data.number_of_seasons}
+              episodes={data.number_of_episodes}
               status={data.status}
               type={data.type}
               networks={data.networks}
@@ -147,6 +150,9 @@ const TvShowDetails = () => {
           )}
         </div>
       </section>
+
+      {/* Similar TV Shows */}
+      <SimilarTvShow />
     </section>
   );
 };

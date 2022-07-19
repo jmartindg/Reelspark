@@ -20,7 +20,7 @@ const TvShowReview = () => {
   const options = { year: "numeric", month: "short", day: "numeric" };
 
   return (
-    <section>
+    <section className="mb-10 md:mb-0">
       <h2 className="font-semibold text-2xl border-l-4 border-yellow-500 pl-2 mb-4">Reviews</h2>
 
       {status === "success" &&

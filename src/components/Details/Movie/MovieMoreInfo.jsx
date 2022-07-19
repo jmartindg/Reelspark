@@ -16,9 +16,9 @@ const MoreInfo = ({ website, status, budget, revenue }) => {
         <h3 className="font-bold pt-3">Status</h3>
         <p className="font-light">{status ? status : "-"}</p>
         <h3 className="font-bold pt-3">Budget</h3>
-        <p className="font-light">${budget ? budget.toLocaleString() : "-"}</p>
+        <p className="font-light">{budget ? `$ ${budget.toLocaleString()}` : "-"}</p>
         <h3 className="font-bold pt-3">Revenue</h3>
-        <p className="font-light">${revenue ? revenue.toLocaleString() : "-"}</p>
+        <p className="font-light">{revenue ? `$ ${revenue.toLocaleString()}` : "-"}</p>
       </article>
     </section>
   );

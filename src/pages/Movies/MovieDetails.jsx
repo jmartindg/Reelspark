@@ -9,6 +9,7 @@ import ErrorMessage from "../../components/ErrorMessage";
 import MovieCast from "../../components/Details/Movie/MovieCast";
 import MovieReviews from "../../components/Details/Movie/MovieReviews";
 import MovieMoreInfo from "../../components/Details/Movie/MovieMoreInfo";
+import SimilarMovie from "../../components/Details/Movie/SimilarMovie";
 
 const getMovieDetails = async (id) => {
   const res = await axios.get(
@@ -138,7 +139,7 @@ const MovieDetails = () => {
       {/* Movie cast */}
       <MovieCast />
 
-      <section className="container mx-auto px-4 lg:px-0 grid md:grid-cols-12 gap-6">
+      <section className="container mx-auto px-4 lg:px-0 md:grid md:grid-cols-12 gap-6">
         <div className="md:col-span-8">
           {/* Movie reviews */}
           <MovieReviews />
@@ -152,6 +153,7 @@ const MovieDetails = () => {
       </section>
 
       {/* Similar movies */}
+      <SimilarMovie />
     </section>
   );
 };
