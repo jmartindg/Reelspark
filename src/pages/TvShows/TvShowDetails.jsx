@@ -6,9 +6,9 @@ import { AiFillStar } from "react-icons/ai";
 import NoImage from "../../assets/no-image.png";
 import Loader from "../../components/Loader";
 import ErrorMessage from "../../components/ErrorMessage";
-import TvShowCast from "../../components/Details/TvShowCast";
-import TvShowMoreInfo from "../../components/Details/TvShowMoreInfo";
-import TvShowReview from "../../components/Details/TvShowReview";
+import TvShowCast from "../../components/Details/TV/TvShowCast";
+import TvShowMoreInfo from "../../components/Details/TV/TvShowMoreInfo";
+import TvShowReview from "../../components/Details/TV/TvShowReview";
 
 const getTvShowDetails = async (id) => {
   const res = await axios.get(

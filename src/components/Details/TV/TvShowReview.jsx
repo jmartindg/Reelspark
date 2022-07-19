@@ -2,9 +2,9 @@ import React from "react";
 import axios from "axios";
 import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
-import NoAvatar from "../../assets/no-avatar.jpg";
-import ReadMore from "./ReadMore";
-import NoReviews from "./NoReviews";
+import NoAvatar from "../../../assets/no-avatar.jpg";
+import ReadMore from "../ReadMore";
+import NoReviews from "../NoReviews";
 
 const getTvShowReviews = async (id) => {
   const res = await axios.get(
@@ -57,7 +57,7 @@ const TvShowReview = () => {
                 </article>
               </section>
             ))
-            .slice(0, 5)
+            .slice(0, 3)
         ))}
     </section>
   );

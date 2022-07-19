@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import axios from "axios";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { useQuery } from "react-query";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import "@splidejs/react-splide/css";
-import CastCard from "../Cards/CastCard";
+import CastCard from "../../Cards/CastCard";
 
 const getMovieCast = async (id) => {
   const res = await axios.get(

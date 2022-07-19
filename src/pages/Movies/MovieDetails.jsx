@@ -6,9 +6,9 @@ import { AiFillStar } from "react-icons/ai";
 import NoImage from "../../assets/no-image.png";
 import Loader from "../../components/Loader";
 import ErrorMessage from "../../components/ErrorMessage";
-import MovieCast from "../../components/Details/MovieCast";
-import MovieReviews from "../../components/Details/MovieReviews";
-import MovieMoreInfo from "../../components/Details/MovieMoreInfo";
+import MovieCast from "../../components/Details/Movie/MovieCast";
+import MovieReviews from "../../components/Details/Movie/MovieReviews";
+import MovieMoreInfo from "../../components/Details/Movie/MovieMoreInfo";
 
 const getMovieDetails = async (id) => {
   const res = await axios.get(
@@ -150,6 +150,8 @@ const MovieDetails = () => {
           )}
         </div>
       </section>
+
+      {/* Similar movies */}
     </section>
   );
 };
