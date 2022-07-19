@@ -6,7 +6,7 @@ const Footer = () => {
   const repoLink = "https://github.com/jmartindg/ReelSpark-v2";
 
   return (
-    <footer className="bg-[#131312] mt-24 py-12">
+    <footer className="bg-[#131312] mt-12 py-12">
       <div className="container mx-auto px-4 lg:px-0">
         <h4 className="text-center text-xl uppercase tracking-wide font-black text-yellow-400 pb-3">ReelSpark</h4>
         <div className="text-center mb-3 text-gray-50 flex justify-center space-x-5">

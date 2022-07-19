@@ -4,6 +4,7 @@ import { useQuery } from "react-query";
 import { useParams } from "react-router-dom";
 import NoImage from "../../assets/no-image.png";
 import ReadMore from "../../components/Details/ReadMore";
+import Loader from "../../components/Loader";
 
 const getActorDetails = async (id) => {
   const res = await axios.get(
@@ -44,6 +45,14 @@ const ActorDetails = () => {
 
   return (
     <>
+      {status === "loading" && (
+        <section className="px-4 lg:px-0">
+          <div className="min-h-screen container mx-auto flex items-center justify-center">
+            <Loader />
+          </div>
+        </section>
+      )}
+
       {status === "success" && (
         <section className="min-h-screen container mx-auto px-4 lg:px-0 flex flex-col lg:flex-row gap-8 items-center py-16 lg:py-0">
           {/* Actor profile image */}
