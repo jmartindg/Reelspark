@@ -52,40 +52,41 @@ const Movies = () => {
       )}
 
       {status === "success" && (
-        <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
-          {status === "success" &&
-            data.map((movie) => (
-              <MovieCard
-                key={movie.id}
-                id={movie.id}
-                title={movie.title}
-                date={movie.release_date}
-                poster={movie.poster_path}
-                rating={movie.vote_average}
-              />
-            ))}
-        </section>
+        <>
+          <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-5">
+            {status === "success" &&
+              data.map((movie) => (
+                <MovieCard
+                  key={movie.id}
+                  id={movie.id}
+                  title={movie.title}
+                  date={movie.release_date}
+                  poster={movie.poster_path}
+                  rating={movie.vote_average}
+                />
+              ))}
+          </section>
+          <section className="flex items-center justify-center mt-12 space-x-4">
+            <button
+              type="button"
+              className="px-3 py-2 rounded disabled:cursor-not-allowed"
+              onClick={() => previousPage(page)}
+              disabled={page === 1}
+            >
+              <FiChevronLeft size={20} />
+            </button>
+            <span className="font-semibold">{page}</span>
+            <button
+              type="button"
+              className="px-3 py-2 rounded disabled:cursor-not-allowed"
+              onClick={() => nextPage(page)}
+              disabled={page === 10}
+            >
+              <FiChevronRight size={20} />
+            </button>
+          </section>
+        </>
       )}
-
-      <section className="flex items-center justify-center mt-12 space-x-4">
-        <button
-          type="button"
-          className="px-3 py-2 rounded disabled:cursor-not-allowed"
-          onClick={() => previousPage(page)}
-          disabled={page === 1}
-        >
-          <FiChevronLeft size={20} />
-        </button>
-        <span className="font-semibold">{page}</span>
-        <button
-          type="button"
-          className="px-3 py-2 rounded disabled:cursor-not-allowed"
-          onClick={() => nextPage(page)}
-          disabled={page === 10}
-        >
-          <FiChevronRight size={20} />
-        </button>
-      </section>
     </section>
   );
 };

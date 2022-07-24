@@ -32,7 +32,7 @@ const TvShowCard = ({ id, title, date, poster, rating }) => {
       <section className="py-4 px-3">
         <div className="flex items-center pb-1">
           <AiFillStar size={18} className="text-yellow-500 mr-1" />{" "}
-          <span className="text-gray-300 text-sm md:text-base truncate">{rating}</span>
+          <span className="text-gray-300 text-sm md:text-base truncate">{Number(rating).toFixed(1)}</span>
         </div>
         <Link to={`/tv-show-details/${id}`}>
           <h3 className="font-medium truncate hover:underline">{title}</h3>
