@@ -90,7 +90,7 @@ const TvShowDetails = () => {
               {/* TV Show rating */}
               <div className="flex items-center my-4">
                 <AiFillStar size={25} className="text-yellow-500 mr-1" />{" "}
-                <span className="text-gray-300 text-base md:text-lg truncate">{data.vote_average}</span>
+                <span className="text-gray-300 text-base md:text-lg truncate">{Number(data.vote_average).toFixed(1)}</span>
               </div>
 
               {/* TV Show tagline */}

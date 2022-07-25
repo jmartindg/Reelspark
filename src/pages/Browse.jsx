@@ -40,7 +40,7 @@ const Browse = () => {
   };
 
   return (
-    <section className="container mx-auto py-10 px-4 lg:px-0">
+    <section className="h-screen container mx-auto py-10 px-4 lg:px-0">
       <header className="mb-6">
         <div className="flex flex-col justify-between md:items-center md:flex-row">
           <h2 className="font-semibold text-2xl text-yellow-500 pb-2 md:pb-0">Browse</h2>
